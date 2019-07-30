@@ -10,7 +10,7 @@ test("gitlab success", () => {
 
   expect(bot_event.channel).toBe("CHANNEL");
   expect(bot_event.timestamp).toBe("TIMESTAMP");
-  expect(bot_event.is_gitlab_result("success")).toBe(true);
+  expect(bot_event.is_gitlab_success()).toBe(true);
 });
 
 test("gitlab failure", () => {
@@ -21,5 +21,5 @@ test("gitlab failure", () => {
     timestamp: "TIMESTAMP",
   });
 
-  expect(bot_event.is_gitlab_result("failure")).toBe(true);
+  expect(bot_event.is_gitlab_failure()).toBe(true);
 });
