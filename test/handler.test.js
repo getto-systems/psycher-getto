@@ -7,7 +7,7 @@ test("handle gitlab result", async () => {
   const messenger = outgoing_messenger.init();
   const bot_event = getto_bot_event.init({
     source: "gitlab",
-    result: "succeed",
+    result: "success",
     channel: "CHANNEL",
     timestamp: "TIMESTAMP",
   });

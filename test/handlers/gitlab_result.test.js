@@ -3,11 +3,11 @@ const outgoing_messenger = require("../outgoing_messenger");
 const getto_bot_event = require("../../lib/getto_bot_event");
 const gitlab_result = require("../../lib/handlers/gitlab_result");
 
-test("gitlab succeed", async () => {
+test("gitlab success", async () => {
   const messenger = outgoing_messenger.init();
   const bot_event = getto_bot_event.init({
     source: "gitlab",
-    result: "succeed",
+    result: "success",
     channel: "CHANNEL",
     timestamp: "TIMESTAMP",
   });
@@ -35,11 +35,11 @@ test("gitlab failure", async () => {
   expect(!!promise).toBe(true);
 });
 
-test("other succeed", async () => {
+test("other success", async () => {
   const messenger = outgoing_messenger.init();
   const bot_event = getto_bot_event.init({
     source: "unknown",
-    result: "succeed",
+    result: "success",
     channel: "CHANNEL",
     timestamp: "TIMESTAMP",
   });
