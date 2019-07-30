@@ -3,10 +3,6 @@ stages:
   - build
   - release
 
-cache:
-  paths:
-    - node_modules
-
 test:
   stage: test
   only:
@@ -19,7 +15,6 @@ test:
   image: node:10.16.0-stretch
 
   before_script:
-    - rm -rf node_modules
     - npm install
   script:
     - npm test
@@ -31,6 +26,10 @@ build:
       - triggers
     variables:
       - $RELEASE
+
+  cache:
+    paths:
+      - node_modules
 
   image: node:10.16.0-stretch
 
@@ -47,6 +46,11 @@ release:
       - triggers
     variables:
       - $RELEASE
+
+  cache:
+    paths:
+      - node_modules
+    policy: pull
 
   image: python:3.7.4
 
