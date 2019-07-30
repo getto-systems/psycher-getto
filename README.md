@@ -2,6 +2,8 @@
 
 getto-psycher getto endpoint
 
+status: production ready
+
 
 ###### Table of Contents
 
