@@ -1,16 +1,16 @@
 const getto_bot_event = require("../lib/getto_bot_event");
 
-test("gitlab succeed", () => {
+test("gitlab success", () => {
   const bot_event = getto_bot_event.init({
     source: "gitlab",
-    result: "succeed",
+    result: "success",
     channel: "CHANNEL",
     timestamp: "TIMESTAMP",
   });
 
   expect(bot_event.channel).toBe("CHANNEL");
   expect(bot_event.timestamp).toBe("TIMESTAMP");
-  expect(bot_event.is_gitlab_result("succeed")).toBe(true);
+  expect(bot_event.is_gitlab_result("success")).toBe(true);
 });
 
 test("gitlab failure", () => {
