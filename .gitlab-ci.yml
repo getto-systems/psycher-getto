@@ -1,0 +1,56 @@
+stages:
+  - test
+  - build
+  - release
+
+cache:
+  paths:
+    - node_modules
+
+test:
+  stage: test
+  only:
+    refs:
+      - merge_requests
+    changes:
+      - lib/**/*
+      - test/**/*
+
+  image: node:10.16.0-stretch
+
+  before_script:
+    - npm install
+  script:
+    - npm test
+
+build:
+  stage: build
+  only:
+    refs:
+      - triggers
+    variables:
+      - $RELEASE
+
+  image: node:10.16.0-stretch
+
+  before_script:
+    - npm install
+  script:
+    - npm test
+
+release:
+  stage: release
+  only:
+    refs:
+      - triggers
+    variables:
+      - $RELEASE
+
+  image: python:3.7.4
+
+  before_script:
+    - pip install awscli
+  script:
+    - ./bin/version_dump.sh
+    - ./bin/push_tags.sh
+    - ./bin/deploy.sh
