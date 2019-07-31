@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.2.1
+
+fix: gitlab-ci See merge request getto-psycher/getto!8
+
+
 ## Version : 1.2.0
 
 fix: random reply See merge request getto-psycher/getto!7
