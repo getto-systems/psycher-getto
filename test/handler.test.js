@@ -14,5 +14,6 @@ test("handle gitlab result", async () => {
 
   await handler.init(bot_event, messenger).handle_event();
 
-  expect(messenger.data.slack).toBe(1);
+  expect(messenger.data.slack.message.length).toBe(0);
+  expect(messenger.data.slack.reaction[0]).toBe("gitlab-success");
 });

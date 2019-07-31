@@ -2,17 +2,20 @@ exports.init = () => init();
 
 const init = () => {
   const data = {
-    slack: 0,
+    slack: {
+      message: [],
+      reaction: [],
+    },
   };
 
-  const slack_reply = async (message) => {
-    data.slack ++;
+  const slack_reply = async (info, message) => {
+    data.slack.message.push(info);
   };
-  const slack_reply_random = async (messages) => {
-    data.slack ++;
+  const slack_reply_random = async (info, messages) => {
+    data.slack.message.push(info);
   };
-  const slack_add_reaction = async (emoji) => {
-    data.slack ++;
+  const slack_add_reaction = async (info, emoji) => {
+    data.slack.reaction.push(info);
   };
 
   return {
