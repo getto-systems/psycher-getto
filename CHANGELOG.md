@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.1.0
+
+add: outgoing info See merge request getto-psycher/getto!6
+
+
 ## Version : 1.0.0
 
 production ready! See merge request getto-psycher/getto!5
