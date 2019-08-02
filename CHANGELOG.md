@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.5.0
+
+fix: slack request See merge request getto-psycher/getto!11
+
+
 ## Version : 1.4.1
 
 
