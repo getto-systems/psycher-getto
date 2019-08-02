@@ -15,7 +15,6 @@ test("gitlab success", async () => {
   const promise = gitlab_result.handle_event(bot_event, messenger);
   await promise;
 
-  expect(messenger.data.slack.message.length).toBe(0);
   expect(messenger.data.slack.reaction[0]).toBe("gitlab-success");
   expect(!!promise).toBe(true);
 });
@@ -32,7 +31,6 @@ test("gitlab failure", async () => {
   const promise = gitlab_result.handle_event(bot_event, messenger);
   await promise;
 
-  expect(messenger.data.slack.message.length).toBe(0);
   expect(messenger.data.slack.reaction[0]).toBe("gitlab-failure");
   expect(!!promise).toBe(true);
 });
@@ -49,7 +47,6 @@ test("other success", async () => {
   const promise = gitlab_result.handle_event(bot_event, messenger);
   await promise;
 
-  expect(messenger.data.slack.message.length).toBe(0);
   expect(messenger.data.slack.reaction.length).toBe(0);
   expect(!!promise).toBe(false);
 });
