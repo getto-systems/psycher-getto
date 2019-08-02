@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.3.0
+
+fix: fetch package See merge request getto-psycher/getto!9
+
+
 ## Version : 1.2.1
 
 fix: gitlab-ci See merge request getto-psycher/getto!8
