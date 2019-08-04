@@ -1,7 +1,9 @@
-const getto_bot_event = require("./lib/getto_bot_event");
-const psycher_secret = require("./lib/psycher_secret");
-const outgoing_messenger = require("./lib/outgoing_messenger");
 const handler = require("./lib/handler");
+const getto_bot_event = require("./lib/getto_bot_event");
+
+const slack_secret = require("./lib/secrets/slack");
+const slack_messenger = require("./lib/outgoing_messengers/slack");
+const slack_request = require("./lib/outgoing_messengers/requests/slack");
 
 const aws_secret_provider = require("./lib/providers/aws_secret");
 
@@ -28,20 +30,45 @@ exports.handler = async (aws_lambda_event) => {
 };
 
 const init_handler = (q, aws_secret) => {
+  const event_info = init_event_info(q);
+  const secret = init_secret(aws_secret);
+
   const bot_event = getto_bot_event.init({
+    event_info,
+    secret,
+  });
+
+  const messenger = init_messenger();
+
+  return handler.init({
+    bot_event,
+    messenger,
+  });
+};
+
+const init_event_info = (q) => {
+  return {
     source: q.source,
     result: q.result,
     channel: q.channel,
     timestamp: q.timestamp,
+  };
+};
+
+const init_secret = (aws_secret) => {
+  const slack = slack_secret.prepare({
+    bot_token: aws_secret["slack-bot-token"],
   });
 
-  const secret = psycher_secret.init({
-    slack: {
-      bot_token: aws_secret["slack-bot-token"],
-    },
-  });
+  return {
+    slack,
+  };
+};
 
-  const messenger = outgoing_messenger.init(bot_event, secret);
+const init_messenger = () => {
+  const slack = slack_messenger.prepare(slack_request);
 
-  return handler.init(bot_event, messenger);
+  return {
+    slack,
+  };
 };
