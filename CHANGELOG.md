@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.6.0
+
+refactor: actions See merge request getto-psycher/getto!12
+
+
 ## Version : 1.5.0
 
 fix: slack request See merge request getto-psycher/getto!11
