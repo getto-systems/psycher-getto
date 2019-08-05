@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.6.1
+
+add: coverage See merge request getto-psycher/getto!13
+
+
 ## Version : 1.6.0
 
 refactor: actions See merge request getto-psycher/getto!12
