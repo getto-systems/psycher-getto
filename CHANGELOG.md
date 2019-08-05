@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.6.2
+
+fix: gitlab-ci See merge request getto-psycher/getto!14
+
+
 ## Version : 1.6.1
 
 add: coverage See merge request getto-psycher/getto!13
