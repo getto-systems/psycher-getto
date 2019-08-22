@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 1.7.1
+
+- fix: event info passing : See merge request getto-psycher/getto!18
+- fix: event info passing : See merge request getto-psycher/getto!17
+
+
 ## Version : 1.7.0
 
 - refactor: models : See merge request getto-psycher/getto!16
