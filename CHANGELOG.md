@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.1.0
+
+- add: push_latest : See merge request getto-psycher/getto!24
+
+
 ## Version : 2.0.2
 
 - fix: notify-gitlab.sh : See merge request getto-psycher/getto!23
