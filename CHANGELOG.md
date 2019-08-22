@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.2.1
+
+- fix: do nothing if push_latest_success file not exists : See merge request getto-psycher/getto!26
+
+
 ## Version : 2.2.0
 
 - fix: push_latest messages : See merge request getto-psycher/getto!25
