@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.8.0
+
+- add: debug log : See merge request getto-psycher/getto!19
+
+
 ## Version : 1.7.1
 
 - fix: event info passing : See merge request getto-psycher/getto!18
