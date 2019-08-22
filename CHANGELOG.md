@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 1.9.0
+
+- fix: success reaction name : See merge request getto-psycher/getto!20
+
+
 ## Version : 1.8.0
 
 - add: debug log : See merge request getto-psycher/getto!19
