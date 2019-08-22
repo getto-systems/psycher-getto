@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 1.7.0
+
+- refactor: models : See merge request getto-psycher/getto!16
+- fix: releaseignore : See merge request getto-psycher/getto!15
+
+
 ## Version : 1.6.2
 
 fix: gitlab-ci See merge request getto-psycher/getto!14
