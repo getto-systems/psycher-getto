@@ -18,7 +18,7 @@ notify(){
 
   if [ "$url" ]; then
     echo "$result : $channel / $timestamp"
-    curl -d '{"source":"gitlab","result":"'"$result"'","channel":"'"$channel"'","timestamp":"'"$timestamp"'"}' "$url"
+    curl -d '{"type":"gitlab","result":"'"$result"'","channel":"'"$channel"'","timestamp":"'"$timestamp"'"}' "$url"
   fi
 }
 
