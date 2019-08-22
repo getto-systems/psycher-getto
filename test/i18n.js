@@ -15,8 +15,8 @@ const init = () => {
     push_latest: {
       success: {
         word: "success",
-        messages: (info) => [
-          info.image + ": ok",
+        messages: (image) => [
+          image + ": ok",
         ],
       },
     },
