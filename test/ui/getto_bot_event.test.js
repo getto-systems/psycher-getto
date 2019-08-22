@@ -1,18 +1,43 @@
 const getto_bot_event = require("../../lib/ui/getto_bot_event");
 
-test("init event_info", async () => {
+test("init deploy event_info", async () => {
   const event_info = getto_bot_event.parse({
-    type: "gitlab",
+    type: "deploy",
     channel: "CHANNEL",
     timestamp: "TIMESTAMP",
     result: "success",
   });
 
   expect(event_info).toEqual({
-    type: "gitlab",
+    type: "deploy",
     detail: {
-      channel: "CHANNEL",
-      timestamp: "TIMESTAMP",
+      reply_to: {
+        channel: "CHANNEL",
+        timestamp: "TIMESTAMP",
+      },
+      info: {},
+      result: "success",
+    },
+  });
+});
+
+test("init push_latest event_info", async () => {
+  const event_info = getto_bot_event.parse({
+    type: "push_latest",
+    channel: "CHANNEL",
+    image: "IMAGE",
+    result: "success",
+  });
+
+  expect(event_info).toEqual({
+    type: "push_latest",
+    detail: {
+      reply_to: {
+        channel: "CHANNEL",
+      },
+      info: {
+        image: "IMAGE",
+      },
       result: "success",
     },
   });
@@ -34,36 +59,6 @@ test("empty type", async () => {
 test("unknown type", async () => {
   const event_info = getto_bot_event.parse({
     type: "unknown",
-  });
-
-  expect(event_info).toBe(null);
-});
-
-test("gitlab : empty channel", async () => {
-  const event_info = getto_bot_event.parse({
-    type: "gitlab",
-    timestamp: "TIMESTAMP",
-    result: "success",
-  });
-
-  expect(event_info).toBe(null);
-});
-
-test("gitlab : empty timestamp", async () => {
-  const event_info = getto_bot_event.parse({
-    type: "gitlab",
-    channel: "CHANNEL",
-    result: "success",
-  });
-
-  expect(event_info).toBe(null);
-});
-
-test("gitlab : empty result", async () => {
-  const event_info = getto_bot_event.parse({
-    type: "gitlab",
-    channel: "CHANNEL",
-    timestamp: "TIMESTAMP",
   });
 
   expect(event_info).toBe(null);

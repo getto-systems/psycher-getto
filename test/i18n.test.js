@@ -6,11 +6,15 @@ test("check i18n struct", async () => {
     const i18n = i18n_factory.init(lang);
 
     const handler_tests = {
-      gitlab: (target) => {
+      deploy: (target) => {
         expect(target.success.word).toBeTruthy();
         expect(target.success.reaction).toBeTruthy();
         expect(target.failure.word).toBeTruthy();
         expect(target.failure.reaction).toBeTruthy();
+      },
+      push_latest: (target) => {
+        expect(target.success.word).toBeTruthy();
+        expect(target.success.messages({image: "IMAGE"})).toBeTruthy();
       },
     };
 

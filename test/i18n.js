@@ -2,7 +2,7 @@ exports.init = () => init();
 
 const init = () => {
   return {
-    gitlab: {
+    deploy: {
       success: {
         word: "success",
         reaction: "ok",
@@ -10,6 +10,14 @@ const init = () => {
       failure: {
         word: "failure",
         reaction: "ng",
+      },
+    },
+    push_latest: {
+      success: {
+        word: "success",
+        messages: (info) => [
+          info.image + ": ok",
+        ],
       },
     },
   };
