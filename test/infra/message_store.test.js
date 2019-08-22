@@ -1,5 +1,32 @@
 const message_store = require("../../lib/infra/message_store");
 
+test("post", async () => {
+  const {store, slack_api} = init_message_store();
+
+  await store.post({
+    token: "TOKEN",
+    reply_to: {
+      channel: "CHANNEL",
+    },
+    text: "TEXT",
+  });
+
+  expect(slack_api.data).toEqual({
+    chat: {
+      postMessage: [
+        {
+          token: "TOKEN",
+          channel: "CHANNEL",
+          text: "TEXT",
+        },
+      ],
+    },
+    reactions: {
+      add: [],
+    },
+  });
+});
+
 test("add", async () => {
   const {store, slack_api} = init_message_store();
 
@@ -13,6 +40,9 @@ test("add", async () => {
   });
 
   expect(slack_api.data).toEqual({
+    chat: {
+      postMessage: [],
+    },
     reactions: {
       add: [
         {
@@ -41,8 +71,20 @@ const init_message_store = () => {
 
 const init_slack_api = () => {
   let data = {
+    chat: {
+      postMessage: [],
+    },
     reactions: {
       add: [],
+    },
+  };
+
+  const chat = {
+    postMessage: async (struct) => {
+      data.chat.postMessage.push(struct);
+      return {
+        status: 200,
+      };
     },
   };
 
@@ -56,6 +98,7 @@ const init_slack_api = () => {
   };
 
   return {
+    chat,
     reactions,
     data,
   };

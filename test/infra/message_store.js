@@ -5,7 +5,12 @@ exports.init = (data) => init(data);
  */
 const init = () => {
   let data = {
+    post: [],
     add: [],
+  };
+
+  const post = async (struct) => {
+    data.post.push(struct);
   };
 
   const add = async (struct) => {
@@ -13,6 +18,7 @@ const init = () => {
   };
 
   return {
+    post,
     add,
     data,
   };

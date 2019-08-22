@@ -15,12 +15,13 @@ test("success", async () => {
   });
 
   await handler.perform(handler.detect_actions({
-    type: "gitlab",
+    type: "deploy",
     i18n,
     notification,
   }));
 
   expect(message_store.data).toEqual({
+    post: [],
     add: [
       {
         token: "MESSAGE-TOKEN",
@@ -40,12 +41,13 @@ test("failure", async () => {
   });
 
   await handler.perform(handler.detect_actions({
-    type: "gitlab",
+    type: "deploy",
     i18n,
     notification,
   }));
 
   expect(message_store.data).toEqual({
+    post: [],
     add: [
       {
         token: "MESSAGE-TOKEN",
@@ -64,8 +66,11 @@ const init_notification = ({result}) => {
 
   const notification = notification_factory.init({
     event_info: {
-      channel: "CHANNEL",
-      timestamp: "TIMESTAMP",
+      reply_to: {
+        channel: "CHANNEL",
+        timestamp: "TIMESTAMP",
+      },
+      info: {},
       result,
     },
     repository,
