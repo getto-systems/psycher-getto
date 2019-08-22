@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.0.1
+
+- fix: notify.sh : See merge request getto-psycher/getto!22
+
+
 ## Version : 2.0.0
 
 - model arranged! : See merge request getto-psycher/getto!21
