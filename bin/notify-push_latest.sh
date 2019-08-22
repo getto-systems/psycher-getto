@@ -6,6 +6,11 @@ notify(){
   local result
   local image
 
+  if [ ! -f push_latest_success ]; then
+    echo "there is no push_latest_success file"
+    return
+  fi
+
   while getopts :r:l: OPT; do
     case $OPT in
       l)
