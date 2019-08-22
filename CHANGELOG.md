@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.0.0
+
+- model arranged! : See merge request getto-psycher/getto!21
+
+
 ## Version : 1.9.0
 
 - fix: success reaction name : See merge request getto-psycher/getto!20
