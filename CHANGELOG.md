@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.2.0
+
+- fix: push_latest messages : See merge request getto-psycher/getto!25
+
+
 ## Version : 2.1.0
 
 - add: push_latest : See merge request getto-psycher/getto!24
