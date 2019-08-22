@@ -43,7 +43,7 @@ exports.handler = async (aws_lambda_event) => {
 const handle = (event_info) => {
   const repository = init_repository();
   const notification = notification_factory.init({
-    event_info.detail,
+    event_info: event_info.detail,
     repository,
   });
   const i18n = i18n_factory.init("ja");
