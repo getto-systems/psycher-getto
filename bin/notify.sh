@@ -1,11 +1,15 @@
 #!/bin/bash
 
 notify(){
+  local notify_type
   local url
   local result
 
-  while getopts :l: OPT; do
+  while getopts :t:l: OPT; do
     case $OPT in
+      t)
+        notify_type=$OPTARG
+        ;;
       l)
         url=$OPTARG
         ;;
@@ -18,7 +22,7 @@ notify(){
 
   if [ "$url" ]; then
     echo "$result : $channel / $timestamp"
-    curl -d '{"type":"gitlab","result":"'"$result"'","channel":"'"$channel"'","timestamp":"'"$timestamp"'"}' "$url"
+    curl -d '{"type":"'"$notify_type"'","result":"'"$result"'","channel":"'"$channel"'","timestamp":"'"$timestamp"'"}' "$url"
   fi
 }
 
