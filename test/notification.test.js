@@ -12,6 +12,7 @@ test("post message", async () => {
     event_info: {
       type: "deploy",
       reply_to: {
+        as: "getto",
         channel: "CHANNEL",
         timestamp: "TIMESTAMP",
       },
@@ -26,8 +27,9 @@ test("post message", async () => {
   expect(message_store.data).toEqual({
     post: [
       {
-        token: "MESSAGE-TOKEN",
+        token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
+          as: "getto",
           channel: "CHANNEL",
           timestamp: "TIMESTAMP",
         },
@@ -45,6 +47,7 @@ test("add reaction", async () => {
     event_info: {
       type: "deploy",
       reply_to: {
+        as: "getto",
         channel: "CHANNEL",
         timestamp: "TIMESTAMP",
       },
@@ -59,8 +62,9 @@ test("add reaction", async () => {
     post: [],
     add: [
       {
-        token: "MESSAGE-TOKEN",
+        token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
+          as: "getto",
           channel: "CHANNEL",
           timestamp: "TIMESTAMP",
         },
@@ -72,7 +76,9 @@ test("add reaction", async () => {
 
 const init_repository = () => {
   const secret_store = secret_store_factory.init({
-    message_token: "MESSAGE-TOKEN",
+    message_tokens: {
+      "getto": "GETTO-MESSAGE-TOKEN",
+    },
   });
   const message_store = message_store_factory.init();
 
