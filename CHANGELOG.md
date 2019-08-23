@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.3.0
+
+- feature: switch slack bot user : See merge request getto-psycher/getto!27
+
+
 ## Version : 2.2.1
 
 - fix: do nothing if push_latest_success file not exists : See merge request getto-psycher/getto!26
