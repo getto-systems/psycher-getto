@@ -2,13 +2,13 @@ exports.init = (data) => init(data);
 
 /**
  * data : {
- *   message_token: message token
+ *   message_tokens: message tokens
  * }
  *
  * returns infra/secret_store
  */
-const init = ({message_token}) => {
+const init = ({message_tokens}) => {
   return {
-    message_token: async () => message_token,
+    message_tokens: async () => message_tokens,
   };
 };

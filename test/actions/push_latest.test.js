@@ -23,8 +23,9 @@ test("success", async () => {
   expect(message_store.data).toEqual({
     post: [
       {
-        token: "MESSAGE-TOKEN",
+        token: "DOCKERHUB-MESSAGE-TOKEN",
         reply_to: {
+          as: "dockerhub",
           channel: "CHANNEL",
         },
         text: "IMAGE: ok",
@@ -40,6 +41,7 @@ const init_notification = ({result}) => {
   const notification = notification_factory.init({
     event_info: {
       reply_to: {
+        as: "dockerhub",
         channel: "CHANNEL",
       },
       info: {
@@ -61,7 +63,9 @@ const init_notification = ({result}) => {
 
 const init_repository = () => {
   const secret_store = secret_store_factory.init({
-    message_token: "MESSAGE-TOKEN",
+    message_tokens: {
+      "dockerhub": "DOCKERHUB-MESSAGE-TOKEN",
+    },
   });
   const message_store = message_store_factory.init();
 

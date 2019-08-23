@@ -1,13 +1,13 @@
 const secret_store = require("../../lib/infra/secret_store");
 
-test("message_token", async () => {
+test("message_tokens", async () => {
   const {store, aws_secrets} = init_secret_store({
-    "slack-bot-token": "SLACK_BOT_TOKEN",
+    "slack-bot-tokens": JSON.stringify({"getto": "SLACK_BOT_TOKEN"}),
   });
 
-  const token = await store.message_token();
+  const tokens = await store.message_tokens();
 
-  expect(token).toBe("SLACK_BOT_TOKEN");
+  expect(tokens).toEqual({"getto": "SLACK_BOT_TOKEN"});
 });
 
 const init_secret_store = (struct) => {

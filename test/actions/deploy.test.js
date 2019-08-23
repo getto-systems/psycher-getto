@@ -24,8 +24,9 @@ test("success", async () => {
     post: [],
     add: [
       {
-        token: "MESSAGE-TOKEN",
+        token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
+          as: "getto",
           channel: "CHANNEL",
           timestamp: "TIMESTAMP",
         },
@@ -50,8 +51,9 @@ test("failure", async () => {
     post: [],
     add: [
       {
-        token: "MESSAGE-TOKEN",
+        token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
+          as: "getto",
           channel: "CHANNEL",
           timestamp: "TIMESTAMP",
         },
@@ -67,6 +69,7 @@ const init_notification = ({result}) => {
   const notification = notification_factory.init({
     event_info: {
       reply_to: {
+        as: "getto",
         channel: "CHANNEL",
         timestamp: "TIMESTAMP",
       },
@@ -87,7 +90,9 @@ const init_notification = ({result}) => {
 
 const init_repository = () => {
   const secret_store = secret_store_factory.init({
-    message_token: "MESSAGE-TOKEN",
+    message_tokens: {
+      "getto": "GETTO-MESSAGE-TOKEN",
+    },
   });
   const message_store = message_store_factory.init();
 

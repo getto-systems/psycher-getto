@@ -12,6 +12,7 @@ test("init deploy event_info", async () => {
     type: "deploy",
     detail: {
       reply_to: {
+        as: "getto",
         channel: "CHANNEL",
         timestamp: "TIMESTAMP",
       },
@@ -33,6 +34,7 @@ test("init push_latest event_info", async () => {
     type: "push_latest",
     detail: {
       reply_to: {
+        as: "dockerhub",
         channel: "CHANNEL",
       },
       info: {
