@@ -76,7 +76,7 @@ push_image:
   stage: build
   only:
     refs:
-      - master@getto-psycher/slack
+      - master@getto-psycher/getto
     changes:
       - package-lock.json
       - Dockerfile
