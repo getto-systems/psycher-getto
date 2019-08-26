@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Version : 2.3.1
+
+- fix: docker-wrapper : See merge request getto-psycher/getto!33
+- fix: Dockerfile-test : See merge request getto-psycher/getto!32
+- fix: Dockerfile-test : See merge request getto-psycher/getto!31
+- fix: description : See merge request getto-psycher/getto!30
+- fix: gitlab-ci : See merge request getto-psycher/getto!29
+- add: Dockerfile : See merge request getto-psycher/getto!28
+
+
 ## Version : 2.3.0
 
 - feature: switch slack bot user : See merge request getto-psycher/getto!27
