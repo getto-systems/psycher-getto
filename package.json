@@ -1,4 +1,6 @@
 {
+  "name": "getto-psycher-getto",
+  "description": "getto-psycher getto endpoint",
   "version": "2.3.0",
   "scripts": {
     "start": "npm run watch",
