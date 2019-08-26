@@ -1,4 +1,4 @@
-FROM getto/hangar:dev
+FROM getto/hangar:test
 
 COPY index.js jest.config.json /opt/app/
 COPY lib /opt/app/lib
