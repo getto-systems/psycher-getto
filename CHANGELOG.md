@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## Version : 2.3.2
+
+- merge: maintenance : See merge request getto-psycher/getto!36
+
+- build(deps): bump getto-memoize from 1.0.0 to 1.0.1
+- build(deps-dev): bump jest from 24.8.0 to 24.9.0
+- build(deps): bump getto-specification from 1.0.0 to 1.0.1
+- build(deps): bump getto-slack_api from 1.0.2 to 1.0.3
+- update: dependencies : See merge request getto-psycher/getto!35
+- build(deps): bump getto-slack_api from 1.0.2 to 1.0.3
+- build(deps): bump getto-aws_secrets from 1.0.0 to 1.0.1
+- build(deps): bump getto-specification from 1.0.0 to 1.0.1
+- build(deps-dev): bump jest from 24.8.0 to 24.9.0
+- build(deps): bump getto-memoize from 1.0.0 to 1.0.1
+- fix: update npm : See merge request getto-psycher/getto!34
+
+
 ## Version : 2.3.1
 
 - fix: docker-wrapper : See merge request getto-psycher/getto!33
