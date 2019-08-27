@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.3.5
+
+- fix: push_tags : See merge request getto-systems-base/psycher/getto!39
+
+
 ## Version : 2.3.4
 
 - fix: push_tags : See merge request getto-systems-base/psycher/getto!38
