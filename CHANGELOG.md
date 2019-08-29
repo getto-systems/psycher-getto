@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 2.3.6
+
+- fix: push_tags : See merge request getto-systems-base/projects/psycher/getto!41
+- add: trivy-opts : See merge request getto-systems-base/projects/psycher/getto!40
+
+
 ## Version : 2.3.5
 
 - fix: push_tags : See merge request getto-systems-base/psycher/getto!39
