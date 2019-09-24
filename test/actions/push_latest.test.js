@@ -2,7 +2,7 @@ const handler = require("../../lib/handler");
 
 const notification_factory = require("../../lib/notification");
 
-const stream_factory = require("../../lib/stream");
+const stream_factory = require("../../lib/notification/message/stream");
 
 const secret_store_factory = require("../infra/secret_store");
 const message_store_factory = require("../infra/message_store");
