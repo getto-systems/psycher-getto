@@ -25,7 +25,6 @@ test("success", async () => {
       {
         token: "DOCKERHUB-MESSAGE-TOKEN",
         reply_to: {
-          as: "dockerhub",
           channel: "CHANNEL",
         },
         text: "IMAGE: ok",
@@ -41,7 +40,6 @@ const init_notification = ({result}) => {
   const notification = notification_factory.init({
     event_info: {
       reply_to: {
-        as: "dockerhub",
         channel: "CHANNEL",
       },
       info: {

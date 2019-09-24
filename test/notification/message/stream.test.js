@@ -7,8 +7,8 @@ test("post", async () => {
   const {stream, message_store} = init_stream();
 
   await stream.post({
+    user: "getto",
     reply_to: {
-      as: "getto",
       channel: "CHANNEL",
     },
     text: "TEXT",
@@ -19,7 +19,6 @@ test("post", async () => {
       {
         token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
-          as: "getto",
           channel: "CHANNEL",
         },
         text: "TEXT",
@@ -33,8 +32,8 @@ test("add", async () => {
   const {stream, message_store} = init_stream();
 
   await stream.add({
+    user: "getto",
     reply_to: {
-      as: "getto",
       channel: "CHANNEL",
       timestamp: "TIMESTAMP",
     },
@@ -47,7 +46,6 @@ test("add", async () => {
       {
         token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
-          as: "getto",
           channel: "CHANNEL",
           timestamp: "TIMESTAMP",
         },
@@ -61,8 +59,8 @@ test("unknown message user", async () => {
   const {stream, message_store} = init_stream();
 
   await expect(stream.add({
+    user: "unknown",
     reply_to: {
-      as: "unknown",
       channel: "CHANNEL",
       timestamp: "TIMESTAMP",
     },
