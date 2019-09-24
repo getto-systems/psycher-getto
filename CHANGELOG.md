@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version : 2.4.1
+
+
+
 ## Version : 2.4.0
 
 - fix: reply user : See merge request getto-systems-base/projects/psycher/getto!50
