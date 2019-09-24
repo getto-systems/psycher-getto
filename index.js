@@ -5,7 +5,7 @@ const notification_factory = require("./lib/notification");
 const handler = require("./lib/handler");
 
 const repository = {
-  stream: require("./lib/stream"),
+  stream: require("./lib/notification/message/stream"),
 };
 
 const infra = {
