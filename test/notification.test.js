@@ -12,7 +12,6 @@ test("post message", async () => {
     event_info: {
       type: "deploy",
       reply_to: {
-        as: "getto",
         channel: "CHANNEL",
         timestamp: "TIMESTAMP",
       },
@@ -22,14 +21,13 @@ test("post message", async () => {
     repository,
   });
 
-  await notification.reply(() => ["message"]);
+  await notification.reply({ messages: () => ["message"], user: "getto" });
 
   expect(message_store.data).toEqual({
     post: [
       {
         token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
-          as: "getto",
           channel: "CHANNEL",
           timestamp: "TIMESTAMP",
         },
@@ -47,7 +45,6 @@ test("add reaction", async () => {
     event_info: {
       type: "deploy",
       reply_to: {
-        as: "getto",
         channel: "CHANNEL",
         timestamp: "TIMESTAMP",
       },
@@ -56,7 +53,7 @@ test("add reaction", async () => {
     repository,
   });
 
-  await notification.reaction("success");
+  await notification.reaction({ name: "success", user: "getto" });
 
   expect(message_store.data).toEqual({
     post: [],
@@ -64,7 +61,6 @@ test("add reaction", async () => {
       {
         token: "GETTO-MESSAGE-TOKEN",
         reply_to: {
-          as: "getto",
           channel: "CHANNEL",
           timestamp: "TIMESTAMP",
         },
