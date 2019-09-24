@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## Version : 2.4.0
+
+- fix: reply user : See merge request getto-systems-base/projects/psycher/getto!50
+- fix: stream location : See merge request getto-systems-base/projects/psycher/getto!49
+- rename: message <- replyer : See merge request getto-systems-base/projects/psycher/getto!48
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!47
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!46
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!45
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!44
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!43
+- fix: dockerignore : See merge request getto-systems-base/projects/psycher/getto!42
+
+
 ## Version : 2.3.6
 
 - fix: push_tags : See merge request getto-systems-base/projects/psycher/getto!41
