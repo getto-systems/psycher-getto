@@ -3,6 +3,7 @@
 notify(){
   local url
   local result
+  local version
 
   while getopts :t:l: OPT; do
     case $OPT in
@@ -15,9 +16,10 @@ notify(){
   shift $((OPTIND - 1))
 
   result=$1
+  version=$(.release-version)
 
   if [ "$url" ]; then
-    echo "$result : $channel"
+    echo "$result : $version : $channel"
     curl -d '{"type":"release","result":"'"$result"'","channel":"'"$channel"'","version":"'"$version"'"}' "$url"
   fi
 }
