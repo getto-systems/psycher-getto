@@ -5,7 +5,7 @@ notify(){
   local result
   local version
 
-  while getopts :t:l: OPT; do
+  while getopts :l: OPT; do
     case $OPT in
       l)
         url=$OPTARG
