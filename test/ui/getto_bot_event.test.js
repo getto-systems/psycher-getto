@@ -1,5 +1,27 @@
 const getto_bot_event = require("../../lib/ui/getto_bot_event");
 
+test("init release event_info", async () => {
+  const event_info = getto_bot_event.parse({
+    type: "release",
+    channel: "CHANNEL",
+    version: "0.0.0",
+    result: "success",
+  });
+
+  expect(event_info).toEqual({
+    type: "release",
+    detail: {
+      reply_to: {
+        channel: "CHANNEL",
+      },
+      info: {
+        version: "0.0.0",
+      },
+      result: "success",
+    },
+  });
+});
+
 test("init deploy event_info", async () => {
   const event_info = getto_bot_event.parse({
     type: "deploy",

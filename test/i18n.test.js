@@ -6,6 +6,12 @@ test("check i18n struct", async () => {
     const i18n = i18n_factory.init(lang);
 
     const handler_tests = {
+      release: (target) => {
+        expect(target.success.word).toBeTruthy();
+        expect(target.success.messages("0.0.0")).toBeTruthy();
+        expect(target.failure.word).toBeTruthy();
+        expect(target.failure.messages("0.0.0")).toBeTruthy();
+      },
       deploy: (target) => {
         expect(target.success.word).toBeTruthy();
         expect(target.success.reaction).toBeTruthy();
@@ -14,7 +20,7 @@ test("check i18n struct", async () => {
       },
       push_latest: (target) => {
         expect(target.success.word).toBeTruthy();
-        expect(target.success.messages({image: "IMAGE"})).toBeTruthy();
+        expect(target.success.messages("IMAGE")).toBeTruthy();
       },
     };
 

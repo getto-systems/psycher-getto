@@ -2,6 +2,20 @@ exports.init = () => init();
 
 const init = () => {
   return {
+    release: {
+      success: {
+        word: "success",
+        messages: (version) => [
+          "OK : version: " + version,
+        ],
+      },
+      failure: {
+        word: "failure",
+        messages: (version) => [
+          "NG : version: " + version,
+        ],
+      },
+    },
     deploy: {
       success: {
         word: "success",
