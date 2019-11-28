@@ -16,7 +16,7 @@ notify(){
   shift $((OPTIND - 1))
 
   result=$1
-  version=$(.release-version)
+  version=$(cat .release-version)
 
   if [ "$url" ]; then
     echo "$result : $version : $channel"
