@@ -18,7 +18,7 @@ notify(){
 
   if [ "$url" ]; then
     echo "$result : $channel"
-    curl -d '{"type":"release","result":"'"$result"'","channel":"'"$channel"'"}' "$url"
+    curl -d '{"type":"release","result":"'"$result"'","channel":"'"$channel"'","version":"'"$version"'"}' "$url"
   fi
 }
 
