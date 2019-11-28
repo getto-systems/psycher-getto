@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 2.5.3
+
+- fix: notify-release.sh : See merge request getto-systems-base/projects/psycher/getto!66
+- fix: notify-release.sh : See merge request getto-systems-base/projects/psycher/getto!65
+
+
 ## Version : 2.5.2
 
 - fix: notify-release.sh : See merge request getto-systems-base/projects/psycher/getto!63
