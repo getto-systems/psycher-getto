@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## Version : 2.5.0
+
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!59
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!58
+- add: release notify : See merge request getto-systems-base/projects/psycher/getto!57
+- fix: set-window-title : See merge request getto-systems-base/projects/psycher/getto!56
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!55
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!54
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!53
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!52
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!51
+
+
 ## Version : 2.4.1
 
 
