@@ -140,7 +140,7 @@ version_dump:
   before_script:
     - git config user.email admin@getto.systems
     - git config user.name getto
-    - curl https://raw.githubusercontent.com/getto-systems/git-post/master/bin/setup.sh | bash -s -- ./vendor/getto-systems
+    - curl https://raw.githubusercontent.com/getto-systems/git-post/master/scripts/setup.sh | bash -s -- ./vendor/getto-systems
     - export PATH=$PATH:./vendor/getto-systems/git-post/bin
   script:
     - curl https://raw.githubusercontent.com/getto-systems/version-dump/master/bin/version_dump.sh | bash
@@ -150,7 +150,7 @@ release:
   stage: release
   only:
     refs:
-      - master@getto-systems-base/clients/kamigumi-osaka/gift/web/rails
+      - master@getto-systems-base/projects/psycher/getto
     changes:
       - .release-version
   except:
@@ -169,7 +169,7 @@ release_success:
   stage: release_notify
   only:
     refs:
-      - master@getto-systems-base/clients/kamigumi-osaka/gift/web/rails
+      - master@getto-systems-base/projects/psycher/getto
     changes:
       - .release-version
   except:
@@ -189,7 +189,7 @@ release_failure:
   stage: release_notify
   only:
     refs:
-      - master@getto-systems-base/clients/kamigumi-osaka/gift/web/rails
+      - master@getto-systems-base/projects/psycher/getto
     changes:
       - .release-version
   except:
