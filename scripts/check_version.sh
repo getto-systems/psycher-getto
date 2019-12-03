@@ -4,7 +4,7 @@ version=$(cat .release-version)
 retry_limit=10
 
 while [ true ]; do
-  status=$(curl -sI https://trellis.getto.systems/ci/bump-version/$version/bump_version.sh | head -1)
+  status=$(curl -sI https://trellis.getto.systems/psycher/getto/$version/notify-release.sh | head -1)
 
   if [ -n "$(echo $status | grep 200)" ]; then
     echo $status
