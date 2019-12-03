@@ -5,7 +5,7 @@ deploy_main(){
   local domain
 
   version=$(cat .release-version)
-  domain=trellis.getto.systems/ci/bump-version
+  domain=trellis.getto.systems/psycher/getto
 
   deploy_to_s3 $domain
   deploy_to_cloudformation
