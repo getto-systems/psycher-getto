@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.5.5
+
+- fix: deploy : See merge request getto-systems-base/projects/psycher/getto!70
+
+
 ## Version : 2.5.4
 
 - fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!68
