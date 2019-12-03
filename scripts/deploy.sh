@@ -34,6 +34,8 @@ deploy_to_cloudformation(){
   mkdir -p .aws
 
   deploy_aws_credentials > .aws/credentials
+  AWS_ACCESS_KEY_ID=
+  AWS_SECRET_ACCESS_KEY=
 
   aws cloudformation package \
     --template-file $template \
