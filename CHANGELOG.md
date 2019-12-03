@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.5.4
+
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!68
+
+
 ## Version : 2.5.3
 
 - fix: notify-release.sh : See merge request getto-systems-base/projects/psycher/getto!66
