@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version : 2.5.7
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20191210140522 : See merge request getto-systems-base/projects/psycher/getto!77
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!76
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20191210123143 : See merge request getto-systems-base/projects/psycher/getto!75
+- fix: vulnerabilities : 2019-12-09T01:11:02,378303900 00:00 : See merge request getto-systems-base/projects/psycher/getto!74
+
+
 ## Version : 2.5.6
 
 - fix: deploy : See merge request getto-systems-base/projects/psycher/getto!72
