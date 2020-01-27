@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## Version : 2.5.8
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200127120258 : See merge request getto-systems-base/projects/psycher/getto!90
+- fix: jest version : See merge request getto-systems-base/projects/psycher/getto!89
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200127111320 : See merge request getto-systems-base/projects/psycher/getto!88
+- fix: vulnerabilities : 2020-01-27T01:10:35,059677781 00:00 : See merge request getto-systems-base/projects/psycher/getto!86
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!87
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200120064043 : See merge request getto-systems-base/projects/psycher/getto!85
+- fix: vulnerabilities : 2020-01-20T01:10:20,954975999 00:00 : See merge request getto-systems-base/projects/psycher/getto!84
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200113074945 : See merge request getto-systems-base/projects/psycher/getto!83
+- fix: vulnerabilities : 2020-01-13T01:09:27,325643592 00:00 : See merge request getto-systems-base/projects/psycher/getto!82
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20191223110049 : See merge request getto-systems-base/projects/psycher/getto!81
+- fix: vulnerabilities : 2019-12-23T01:09:02,156239776 00:00 : See merge request getto-systems-base/projects/psycher/getto!80
+
+
 ## Version : 2.5.7
 
 - fix: image : getto/hangar:gYaQacAknxAHd7lx-20191210140522 : See merge request getto-systems-base/projects/psycher/getto!77
