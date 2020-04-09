@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version : 2.5.14
+
+
+
 ## Version : 2.5.13
 
 - fix: image : getto/hangar:gYaQacAknxAHd7lx-20200409021914 : See merge request getto-systems-base/projects/psycher/getto!108
