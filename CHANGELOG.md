@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version : 2.5.15
+
+- fix: deploy.sh : See merge request getto-systems-base/projects/psycher/getto!113
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200409035318 : See merge request getto-systems-base/projects/psycher/getto!112
+- update: Dockerfile : See merge request getto-systems-base/projects/psycher/getto!111
+
+
+
 ## Version : 2.5.14
 
 
