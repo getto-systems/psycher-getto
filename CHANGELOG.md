@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version : 2.5.13
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200409021914 : See merge request getto-systems-base/projects/psycher/getto!108
+- merge: dependabot : See merge request getto-systems-base/projects/psycher/getto!107
+
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!106
+
+
 ## Version : 2.5.12
 
 - fix: image : getto/hangar:gYaQacAknxAHd7lx-20200330121055 : See merge request getto-systems-base/projects/psycher/getto!103
