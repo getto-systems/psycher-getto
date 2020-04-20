@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Version : 2.5.16
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200420222432 : See merge request getto-systems-base/projects/psycher/getto!118
+- merge: dependabot : See merge request getto-systems-base/projects/psycher/getto!117
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200420035120 : See merge request getto-systems-base/projects/psycher/getto!116
+- fix: vulnerabilities : 2020-04-20T01:08:19,263319680 00:00 : See merge request getto-systems-base/projects/psycher/getto!115
+
+
 ## Version : 2.5.15
 
 - fix: deploy.sh : See merge request getto-systems-base/projects/psycher/getto!113
