@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.6.0
+
+- fix: notice scripts : See merge request getto-systems-base/projects/psycher/getto!125
+
+
 ## Version : 2.5.17
 
 - fix: image : getto/hangar:gYaQacAknxAHd7lx-20200430031550 : See merge request getto-systems-base/projects/psycher/getto!123
