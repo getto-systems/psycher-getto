@@ -169,7 +169,7 @@ bump_version:
     variables:
       - $RELEASE
 
-  image: buildpack-deps:disco-scm
+  image: buildpack-deps:buster-scm
 
   before_script:
     - git config user.email admin@getto.systems
@@ -212,12 +212,14 @@ release_success:
       - schedules
   when: on_success
 
-  image: buildpack-deps:disco-curl
+  image: buildpack-deps:buster-curl
 
   before_script:
+    - export url=$GETTO_PSYCHER_URL?$GETTO_PSYCHER_TOKEN=true
     - export channel=$SLACK_CHANNEL
+    - export version=$(cat .release-version)
   script:
-    - cat ./dist/notify-release.sh | bash -s -- -l $GETTO_PSYCHER_URL?$GETTO_PSYCHER_TOKEN=true success
+    - cat ./dist/notify-release-success.sh | bash -s -- $url $channel $version
 
 release_failure:
   stage: release_notify
@@ -232,9 +234,11 @@ release_failure:
       - schedules
   when: on_failure
 
-  image: buildpack-deps:disco-curl
+  image: buildpack-deps:buster-curl
 
   before_script:
+    - export url=$GETTO_PSYCHER_URL?$GETTO_PSYCHER_TOKEN=true
     - export channel=$SLACK_CHANNEL
+    - export version=$(cat .release-version)
   script:
-    - cat ./dist/notify-release.sh | bash -s -- -l $GETTO_PSYCHER_URL?$GETTO_PSYCHER_TOKEN=true failure
+    - cat ./dist/notify-release-failure.sh | bash -s -- $url $channel $version
