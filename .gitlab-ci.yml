@@ -127,7 +127,7 @@ image_fix_vulnerabilities:
     - export PATH=$PATH:./vendor/getto-systems/git-post/bin
   script:
     - getto-hangar-fix-vulnerabilities.sh
-    - curl https://trellis.getto.systems/ci/bump-version/1.2.1/request.sh | bash -s -- ./.fix-vulnerabilities-message.sh
+    - curl https://trellis.getto.systems/ci/bump-version/1.4.0/request.sh | bash -s -- ./.fix-vulnerabilities-message.sh
 
 image_push:
   stage: image_push
@@ -159,7 +159,7 @@ image_push:
 
   script:
     - getto-hangar-push.sh
-    - curl https://trellis.getto.systems/ci/bump-version/1.2.1/request.sh | bash -s -- ./.fix-image-message.sh
+    - curl https://trellis.getto.systems/ci/bump-version/1.4.0/request.sh | bash -s -- ./.fix-image-message.sh
 
 bump_version:
   stage: bump_version
@@ -177,8 +177,8 @@ bump_version:
     - curl https://trellis.getto.systems/git/post/1.0.0/setup.sh | bash -s -- ./vendor/getto-systems
     - export PATH=$PATH:./vendor/getto-systems/git-post/bin
   script:
-    - curl https://trellis.getto.systems/ci/bump-version/1.2.1/bump_version.sh | bash
-    - curl https://trellis.getto.systems/ci/bump-version/1.2.1/request.sh | bash -s -- ./.bump-message.sh
+    - curl https://trellis.getto.systems/ci/bump-version/1.4.0/bump_version.sh | bash
+    - curl https://trellis.getto.systems/ci/bump-version/1.4.0/request.sh | bash -s -- ./.bump-message.sh
 
 release:
   stage: release
@@ -196,7 +196,7 @@ release:
     - ./scripts/restore.sh
   script:
     - npm test
-    - curl https://trellis.getto.systems/ci/bump-version/1.2.1/push_tags.sh | bash
+    - curl https://trellis.getto.systems/ci/bump-version/1.4.0/push_tags.sh | bash
     - ./scripts/deploy.sh
 
 release_success:
@@ -217,7 +217,7 @@ release_success:
   before_script:
     - export url=$GETTO_PSYCHER_URL?$GETTO_PSYCHER_TOKEN=true
     - export channel=$SLACK_CHANNEL
-    - export version=$(cat .release-version)
+    - export version=getto:$(cat .release-version)
   script:
     - cat ./dist/notify-release-success.sh | bash -s -- $url $channel $version
 
@@ -239,6 +239,6 @@ release_failure:
   before_script:
     - export url=$GETTO_PSYCHER_URL?$GETTO_PSYCHER_TOKEN=true
     - export channel=$SLACK_CHANNEL
-    - export version=$(cat .release-version)
+    - export version=getto:$(cat .release-version)
   script:
     - cat ./dist/notify-release-failure.sh | bash -s -- $url $channel $version
