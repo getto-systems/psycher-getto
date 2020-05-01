@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version : 2.6.1
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200501155526 : See merge request getto-systems-base/projects/psycher/getto!129
+- fix: baseimage : See merge request getto-systems-base/projects/psycher/getto!128
+- fix: docker-wrapper rc path : See merge request getto-systems-base/projects/psycher/getto!127
+
+
 ## Version : 2.6.0
 
 - fix: notice scripts : See merge request getto-systems-base/projects/psycher/getto!125
