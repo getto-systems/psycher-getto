@@ -15,7 +15,6 @@ variables:
   TRELLIS_HANGAR: https://trellis.getto.systems/hangar/3.0.0
   TRELLIS_GIT_POST: https://trellis.getto.systems/git/post/1.0.0
   TRELLIS_CI_BUMP_VERSION: https://trellis.getto.systems/ci/bump-version/1.4.0
-  TRELLIS_PSYCHER_GETTO: https://trellis.getto.systems/psycher/getto/2.6.0
 
 test:
   stage: test
@@ -223,7 +222,7 @@ release_success:
     - export channel=$SLACK_CHANNEL
     - export version=getto:$(cat .release-version)
   script:
-    - curl $TRELLIS_PSYCHER_GETTO/notify-release-success.sh | sh -s -- $url $channel $version
+    - cat ./dist/notify-release-success.sh | sh -s -- $url $channel $version
 
 release_failure:
   stage: release_notify
@@ -245,4 +244,4 @@ release_failure:
     - export channel=$SLACK_CHANNEL
     - export version=getto:$(cat .release-version)
   script:
-    - curl $TRELLIS_PSYCHER_GETTO/notify-release-failure.sh | sh -s -- $url $channel $version
+    - cat ./dist/notify-release-failure.sh | sh -s -- $url $channel $version
