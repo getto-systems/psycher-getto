@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.7.0
+
+- remove: deprecated scripts : See merge request getto-systems-base/projects/psycher/getto!144
+
+
 ## Version : 2.6.4
 
 - fix: image : getto/hangar:gYaQacAknxAHd7lx-20200508074351 : See merge request getto-systems-base/projects/psycher/getto!142
