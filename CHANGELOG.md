@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Version : 2.6.3
+
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!139
+- fix: deploy script : See merge request getto-systems-base/projects/psycher/getto!138
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200508072103 : See merge request getto-systems-base/projects/psycher/getto!137
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!136
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200508070412 : See merge request getto-systems-base/projects/psycher/getto!135
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!134
+
+
 ## Version : 2.6.2
 
 - merge: dependabot : See merge request getto-systems-base/projects/psycher/getto!131
