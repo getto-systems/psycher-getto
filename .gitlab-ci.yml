@@ -79,7 +79,10 @@ image_test:
   needs:
     - image_build
 
+  image: amazonlinux:2
+
   before_script:
+    - yum install -y gzip tar
     - curl $TRELLIS_HANGAR/install_trivy.sh | sh -s -- vendor
     - curl $TRELLIS_HANGAR/install_dockle.sh | sh -s -- vendor
   script:
