@@ -9,6 +9,8 @@ deploy_main(){
 
   deploy_to_s3 $domain
   deploy_to_cloudformation
+
+  deploy_check $domain notify-release-success.sh
 }
 deploy_to_s3(){
   local target
@@ -46,6 +48,37 @@ deploy_to_cloudformation(){
     --stack-name $stack \
     && \
   :
+}
+
+deploy_check(){
+  local target
+  local file
+  local retry_limit
+  local status
+
+  target=$1; shift
+  file=$1; shift
+
+  retry_limit=10
+
+  sleep 1
+
+  while [ true ]; do
+    status=$(curl -sI https://$target/$version/$file | head -1)
+
+    if [ -n "$(echo $status | grep 200)" ]; then
+      echo $status
+      exit 0
+    fi
+
+    if [ $retry_limit -gt 0 ]; then
+      retry_limit=$((retry_limit - 1))
+      sleep 1
+    else
+      echo $status
+      exit 1
+    fi
+  done
 }
 
 deploy_main
