@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## Version : 2.7.1
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200701202617 : See merge request getto-systems-base/projects/psycher/getto!154
+- merge: dependabot : See merge request getto-systems-base/projects/psycher/getto!153
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20200608045844 : See merge request getto-systems-base/projects/psycher/getto!152
+- fix: vulnerabilities : 2020-06-08T01:06:59,018979158 00:00 : See merge request getto-systems-base/projects/psycher/getto!150
+- fix: vulnerabilities : See merge request getto-systems-base/projects/psycher/getto!151
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!149
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!148
+- fix: gitlab-ci : See merge request getto-systems-base/projects/psycher/getto!147
+- remove: unused file : See merge request getto-systems-base/projects/psycher/getto!146
+
+
 ## Version : 2.7.0
 
 - remove: deprecated scripts : See merge request getto-systems-base/projects/psycher/getto!144
