@@ -13,8 +13,8 @@ stages:
 
 variables:
   TRELLIS_HANGAR: https://trellis.getto.systems/hangar/3.5.0
-  TRELLIS_GIT_POST: https://trellis.getto.systems/git/post/1.0.0
-  TRELLIS_CI_BUMP_VERSION: https://trellis.getto.systems/ci/bump-version/1.4.0
+  TRELLIS_GIT_POST: https://trellis.getto.systems/git/post/1.5.1
+  TRELLIS_CI_BUMP_VERSION: https://trellis.getto.systems/ci/bump-version/1.10.1
 
 test:
   stage: test
@@ -128,7 +128,7 @@ image_push:
   stage: image_push
   only:
     refs:
-      - master@getto-systems-base/projects/psycher/getto
+      - release@getto-systems-base/projects/psycher/getto
     changes:
       - package-lock.json
       - Dockerfile
@@ -189,7 +189,7 @@ release:
   stage: release
   only:
     refs:
-      - master@getto-systems-base/projects/psycher/getto
+      - release@getto-systems-base/projects/psycher/getto
     changes:
       - .release-version
   except:
@@ -208,7 +208,7 @@ release_success:
   stage: release_notify
   only:
     refs:
-      - master@getto-systems-base/projects/psycher/getto
+      - release@getto-systems-base/projects/psycher/getto
     changes:
       - .release-version
   except:
@@ -230,7 +230,7 @@ release_failure:
   stage: release_notify
   only:
     refs:
-      - master@getto-systems-base/projects/psycher/getto
+      - release@getto-systems-base/projects/psycher/getto
     changes:
       - .release-version
   except:
