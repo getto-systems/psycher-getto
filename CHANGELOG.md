@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 2.7.2
+
+- fix: gitlab ci : See merge request getto-systems-base/projects/psycher/getto!156
+
+
 ## Version : 2.7.1
 
 - fix: image : getto/hangar:gYaQacAknxAHd7lx-20200701202617 : See merge request getto-systems-base/projects/psycher/getto!154
