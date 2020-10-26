@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 2.7.7
+
+- fix: image : getto/hangar:gYaQacAknxAHd7lx-20201026103307 : See merge request getto-systems-base/projects/psycher/getto!171
+- merge: dependabot : See merge request getto-systems-base/projects/psycher/getto!170
+
+
 ## Version : 2.7.6
 
 - fix: image : getto/hangar:gYaQacAknxAHd7lx-20201012054827 : See merge request getto-systems-base/projects/psycher/getto!168
